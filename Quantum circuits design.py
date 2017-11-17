@@ -11,7 +11,7 @@ def kron(a, b):
     ans = torch.from_numpy(np.kron(a, b))
     return(ans)
 # ======================================================================================================================
-# gate database
+# gate database 1111111
 I = np.array([[1, 0], [0, 1]])
 X = np.array([[0, 1], [1, 0]])
 Y = np.array([[0, -1j], [1j, 0]])
