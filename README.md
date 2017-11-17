@@ -10,3 +10,13 @@ Four element list: \[a, b, c, d], where a, b and c are intergers, and d is the v
 
 __Example__<br>
 ![example_Toffoli](https://github.com/RindJLU/Quantum-circuits-design/blob/master/pictures/Toffoli.png)<br>
+The code here is \[1 3 2 0.0]; \[2 3 1 0.0]; \[3 2 1 0.0]; \[4 3 2 0.0]; \[2 1 3 0.0].<br>
+
+__MY CODE TO GENERATE TOFFOLI GATE__<br>
+See Quantum circuits design.py<br>
+__Problem:__ Mainly use Annealing methods to generate search the new circuits, although it can generate new Toffoli gate, but it is too slow and wastes many resouses.<br>
+__Some solutions of Toffoli gate:__<br>
+\[[2, 1, 3], [4, 3, 2], [2, 1, 3], [1, 3, 2], [3, 2, 1]]<br>
+\[[1, 3, 1], [2, 3, 2], [4, 3, 1], [3, 2, 1], [2, 3, 2]]<br>
+\[[3, 2, 1], [2, 3, 1], [4, 3, 2], [2, 1, 3], [1, 3, 2]]<br>
+
