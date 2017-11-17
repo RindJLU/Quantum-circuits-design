@@ -26,7 +26,9 @@ DATA:<br>
    __Z__ = <projectq.ops._gates.ZGate object<br>
 __Introduce the gates:__ 
 ```
-python
-from project.ops import H, X, Y, ......
+from project.ops import H, X, Y, Measure......
 ```
+
+## 2. MainEngine<br>
+ 1111
 
