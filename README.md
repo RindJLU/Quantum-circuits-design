@@ -1,4 +1,4 @@
-# Quantum circuits design. by yufeng(11/17/2017)
+# __Quantum circuits design. By yufeng__
 ## 1. Encode the quantum circuits.<br>
 
 The method of encoding the quantum circuits empersis on the one qubits gate and two qubits gate(universal quantum gates: actually single qubit gates and CNOT gate is already universal\[Quantum computation and quantum information]).<br>
