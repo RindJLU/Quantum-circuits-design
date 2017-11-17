@@ -30,6 +30,9 @@ from project.ops import H, X, Y, Measure......
 ```
 
 ## 2. MainEngine<br>
- 11111111
- 1111111
+```
+from projectq import MainEngine
+eng = MainEngine()
+q1 = eng.allocate_qubit() # Create new qubits
+```
 
