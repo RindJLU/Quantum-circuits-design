@@ -2,6 +2,7 @@
 
 ## 1. projectq.ops:<br>
 DATA:<br>
+```
     Allocate = <projectq.ops._gates.AllocateQubitGate object><br>
     AllocateDirty = <projectq.ops._gates.AllocateDirtyQubitGate object><br>
     Barrier = <projectq.ops._gates.BarrierGate object><br>
@@ -24,6 +25,7 @@ DATA:<br>
    __X__ = <projectq.ops._gates.XGate object><br>
    __Y__ = <projectq.ops._gates.YGate object><br>
    __Z__ = <projectq.ops._gates.ZGate object<br>
+```
 __Introduce the gates:__ 
 ```
 from project.ops import H, X, Y, Measure......
@@ -66,7 +68,7 @@ print('Measured 0 {} times'.format(q1_0))
 print('Measured 1 {} times'.format(q1_1))
 plt.bar([0, 1], [q1_1, q1_0], width=0.4, color="green")
 plt.show()
-
+```
 ## 4. Control operation
 To realize control operation, it is important to import __Control__ from projectq.meta<br>
 ```
