@@ -118,5 +118,57 @@ def Draw(eng, code_list):
 Draw(eng, ([3, 2, 1],))
 ```
 
+## 6. Draw Pictures of Quantum Circuits
+```
+def Draw(eng, code_list):
+    # code_list contains the code of a quantum circuits, more details see Quantumcircuits_design.py
+    # Store gates using tuble
+    gate_list = (X, Z, S, X)
+    # Store qubits using tuble
+    q = ('',)
+    q += (eng.allocate_qubit(),)
+    q += (eng.allocate_qubit(),)
+    q += (eng.allocate_qubit(),)
+    for i in code_list:
+        gate_index = i[0]
+        gate = gate_list[gate_index - 1]
+        q_trg_index = i[1]
+        q_trg = q[q_trg_index]
+        q_ctrl_index = i[2]
+        q_ctrl = q[q_ctrl_index]
+        q_trg = control(gate, q_trg, q_ctrl)
+    eng.flush()
+    print(drawing_engine.get_latex())
+Draw(eng, ([3, 2, 1],))
+```
+__Result:__<br>
+```
+LaTex code:
+\documentclass{standalone}
+\usepackage[margin=1in]{geometry}
+\usepackage[hang,small,bf]{caption}
+\usepackage{tikz}
+\usepackage{braket}
+\usetikzlibrary{backgrounds,shadows.blur,fit,decorations.pathreplacing,shapes}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.8, transform shape]
+
+\tikzstyle{basicshadow}=[blur shadow={shadow blur steps=8, shadow xshift=0.7pt, shadow yshift=-0.7pt, shadow scale=1.02}]\tikzstyle{basic}=[draw,fill=white,basicshadow]
+\tikzstyle{operator}=[basic,minimum size=1.5em]
+\tikzstyle{phase}=[fill=black,shape=circle,minimum size=0.1cm,inner sep=0pt,outer sep=0pt,draw=black]
+\tikzstyle{none}=[inner sep=0pt,outer sep=-.5pt,minimum height=0.5cm+1pt]
+\tikzstyle{measure}=[operator,inner sep=0pt,minimum height=0.5cm, minimum width=0.75cm]
+\tikzstyle{xstyle}=[circle,basic,minimum height=0.35cm,minimum width=0.35cm,inner sep=0pt,very thin]
+\tikzset{
+shadowed/.style={preaction={transform canvas={shift={(0.5pt,-0.5pt)}}, draw=gray, opacity=0.4}},
+}
+\tikzstyle{swapstyle}=[inner sep=-1pt, outer sep=-1pt, minimum width=0pt]
+\tikzstyle{edgestyle}=[very thin]
+
+
+\end{tikzpicture}
+\end{document}
+```
 
 
