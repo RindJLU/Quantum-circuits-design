@@ -20,3 +20,14 @@ __Some solutions of Toffoli gate:__<br>
 \[[1, 3, 1], [2, 3, 2], [4, 3, 1], [3, 2, 1], [2, 3, 2]]<br>
 \[[3, 2, 1], [2, 3, 1], [4, 3, 2], [2, 1, 3], [1, 3, 2]]<br>
 
+## 3. Design circuits with projectQ<br>
+### Link projectQ with the representation listed above. <br>
+__Controled gates realization:__<br>(see projectQ_NOTE.md)<br>
+```
+with Control(eng, q_ctrl):
+    Gate | q_trg
+```
+____
+
+
+

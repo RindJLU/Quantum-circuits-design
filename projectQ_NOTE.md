@@ -8,11 +8,11 @@ DATA:<br>
     CNOT = <projectq.ops._metagates.ControlledGate object><br>
     CX = <projectq.ops._metagates.ControlledGate object><br>
     Deallocate = <projectq.ops._gates.DeallocateQubitGate object><br>
-   __Entangle(?)__ = <projectq.ops._gates.EntangleGate object><br>
+    Entangle(?) = <projectq.ops._gates.EntangleGate object><br>
     H = <projectq.ops._gates.HGate object><br>
     Measure = <projectq.ops._gates.MeasureGate object><br>
     NOT = <projectq.ops._gates.XGate object><br>
-   __QFT(?)__ = <projectq.ops._qftgate.QFTGate object><br>
+    QFT(?) = <projectq.ops._qftgate.QFTGate object><br>
     S = <projectq.ops._gates.SGate object><br>
     Sdag = <projectq.ops._metagates.DaggeredGate object><br>
     Sdagger = <projectq.ops._metagates.DaggeredGate object><br>
@@ -41,6 +41,7 @@ q1 = eng.allocate_qubit() # Create new qubits
 H | q1
 Measure |q1
 ```
+
 This is just one measurement. To understand what is the state of q1, we need do many measurement to determine the norm of the quantum state of a qubit.<br>
 ```
 from projectq import MainEngine
@@ -65,6 +66,57 @@ print('Measured 0 {} times'.format(q1_0))
 print('Measured 1 {} times'.format(q1_1))
 plt.bar([0, 1], [q1_1, q1_0], width=0.4, color="green")
 plt.show()
+
+## 4. Control operation
+To realize control operation, it is important to import __Control__ from projectq.meta<br>
 ```
+from projectq import MainEngine
+from projectq.meta import Control
+from prodectq import H, X, Measure
+
+eng = MainEngine()
+
+\# Genrating two qubits
+q_ctrl = eng.allocate_qubit()
+q_trg = eng.allocate_qubit()
+
+H | q_ctrl
+\# control operation
+with Control(eng, q_ctrl):
+    X | q_trg
+
+Measure | q_ctrl
+Measure | q_trg
+
+eng.flush()
+
+print('Measured q1: {}'.format(int(q1)))
+print('Measured q2: {}'.format(int(q2)))
+```
+## 5. Print picture of quantum circuits:<br>
+Use CircuitDrawer in projectq.backends<br>
+```
+def Draw(eng, code_list):
+    # code_list contains the code of a quantum circuits, more details see Quantumcircuits_design.py
+    # Store gates using tuble
+    gate_list = (X, Z, S, X)
+    # Store qubits using tuble
+    q = ('',)
+    q += (eng.allocate_qubit(),)
+    q += (eng.allocate_qubit(),)
+    q += (eng.allocate_qubit(),)
+    for i in code_list:
+        gate_index = i[0]
+        gate = gate_list[gate_index - 1]
+        q_trg_index = i[1]
+        q_trg = q[q_trg_index]
+        q_ctrl_index = i[2]
+        q_ctrl = q[q_ctrl_index]
+        q_trg = control(gate, q_trg, q_ctrl)
+    eng.flush()
+    print(drawing_engine.get_latex())
+Draw(eng, ([3, 2, 1],))
+```
+
 
 
