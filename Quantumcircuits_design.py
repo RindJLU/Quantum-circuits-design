@@ -54,12 +54,12 @@ def controled_gate(x, m, gate):
 # print(res)
 
 
-tof1 = np.kron(gate['I'], controled_gate(gate['V'], 0, gate))
-tof2 = np.kron(np.kron(gate['P0'], gate['I']), gate['I']) + np.kron(np.kron(gate['P1'], gate['I']), gate['Z'])
-tof3 = np.kron(controled_gate(gate['S'], 0, gate), gate['I'])
-tof4 = np.kron(gate['I'], controled_gate(gate['V_dug'], 0, gate))
-tof5 = np.kron(np.kron(gate['I'], gate['I']), gate['P0']) + np.kron(np.kron(gate['Z'], gate['I']), gate['P1'])
-tup = (tof1, tof2, tof3, tof4, tof5)
+# tof1 = np.kron(gate['I'], controled_gate(gate['V'], 0, gate))
+# tof2 = np.kron(np.kron(gate['P0'], gate['I']), gate['I']) + np.kron(np.kron(gate['P1'], gate['I']), gate['Z'])
+# tof3 = np.kron(controled_gate(gate['S'], 0, gate), gate['I'])
+# tof4 = np.kron(gate['I'], controled_gate(gate['V_dug'], 0, gate))
+# tof5 = np.kron(np.kron(gate['I'], gate['I']), gate['P0']) + np.kron(np.kron(gate['Z'], gate['I']), gate['P1'])
+# tup = (tof1, tof2, tof3, tof4, tof5)
 
 # ans = np.eye(8)
 # for i in tup: # 此处用tuple存储数据
