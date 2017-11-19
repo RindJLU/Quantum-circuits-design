@@ -50,8 +50,8 @@ __Obtaining the unitary matrix of the quantum circuits based on
    |0> and |1>, it is useful to measure many times(say 1024 times) to get the relative
    probability.
 
-    __Example and visualize__
-    ![CNOT gate]()
+__Example and visualize__
+![CNOT gate]()    
 
 
 
