@@ -51,7 +51,19 @@ __Obtaining the unitary matrix of the quantum circuits based on
    probability.
 
 __Example and visualize__
-![CNOT gate]()    
+![CNOT gate](https://github.com/RindJLU/Quantum-circuits-design/blob/master/pictures/TIM%E6%88%AA%E5%9B%BE20171119215034.png)
+(From https://arxiv.org/pdf/0905.2103.pdf)
+Like the picture below, by comparing the final emperimental and theorical output, it is possible to define the __loss function__.
+
+
+# Problem existed:
+## 1. INPUT?
+The core problem is that the input of qubit is two dimention(2 by 1), and if the two element is not 0 at the same time, this is __superposition__. This is different from classical nueral network where the input can only be 0 or 1. 
+
+## 2. Controled gate.
+How to represnt controled gate in correspoding nueral network? This may equal to the problem of __entanglement state__.
+
+Currently, my though for this problem is to find a function linking control qubit and target qubit, which can generate the result of correspoding controled gate operation.
 
 
 
