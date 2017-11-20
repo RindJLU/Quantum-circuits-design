@@ -24,7 +24,7 @@ non-rotation gates)<br>**
 \[[3, 2, 1], [2, 3, 1], [4, 3, 2], [2, 1, 3], [1, 3, 2]]<br>
 \[[1, 3, 2], [2, 1, 3], [4, 3, 2], [2, 1, 3], [3, 2, 1]]<br>
 Fidelity with step:
-![Fidelity with step]()
+![Fidelity with step](https://github.com/RindJLU/Quantum-circuits-design/blob/master/pictures/Figure_1.png)
 
 ## 2. Design circuits with projectQ<br>
 ### 2.1 What is the difficulty of using projectQ?<br>
