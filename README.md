@@ -35,8 +35,8 @@ the output itself is not precise.
 
 Secondly, in the Simulated Annealing method, we use __unitary gate__ 
 as optimization target. But here we cannot use unitary gate, 
-since projectQ is based on experiment, which only give output of
-qubits. In this case, use**Truth Table** could be better.
+since projectQ is based on experimental result, which means we can only analysis
+the data to attain the state of qubits. In this case, use**Truth Table** could be better.
 
 
 
@@ -66,8 +66,8 @@ The core problem is that the input of qubit is two dimention(2 by 1), and if the
 ## 2. Controled gate.
 How to represnt controled gate in correspoding nueral network? This may equal to the problem of __entanglement state__.
 
-Currently, my though for this problem is to find a function linking control qubit and target qubit, which can generate the result of correspoding controled gate operation.
-
-
+Currently, my though for this problem is to find a function linking control qubit and target qubit, which can generate the result of correspoding controled gate operation.<br>
+__There are several papers that discuss this problems, see fold 'papers'.__
+![paper](https://github.com/RindJLU/Quantum-circuits-design/blob/master/papers/%E5%9F%BA%E4%BA%8E%E9%87%8F%E5%AD%90%E9%97%A8%E7%BA%BF%E8%B7%AF%E7%9A%84%E9%87%8F%E5%AD%90%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%E5%8F%8A%E7%AE%97%E6%B3%95.pdf)
 
 
