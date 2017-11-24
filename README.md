@@ -27,7 +27,7 @@ Fidelity with step:
 ![Fidelity with step](https://github.com/RindJLU/Quantum-circuits-design/blob/master/pictures/Figure_1.png)
 
 ## 2. Design circuits with projectQ<br>
-### 2.1 What is the difficulty of using projectQ?<br>
+### 2.1 What is the difficulty to use projectQ?<br>
 Firstly, projectQ is not a simulation mathod, but more like a experiment way. This is 
 because projectQ is based on IBM Quantum Experience, and the error of 
 quantum devices provided by IBM(also see IBM Q: https://quantumexperience.ng.bluemix.net/qx/community) can make it hard to apply machine learning since 
@@ -56,7 +56,20 @@ __Obtaining the unitary matrix of the quantum circuits based on
 __Example and visualize__
 ![CNOT gate](https://github.com/RindJLU/Quantum-circuits-design/blob/master/pictures/TIM%E6%88%AA%E5%9B%BE20171119215034.png)
 (From https://arxiv.org/pdf/0905.2103.pdf)
-Like the picture below, by comparing the final emperimental and theorical output, it is possible to define the __loss function__.
+Like the picture below, by comparing the final emperimental and theorical output, it is possible to define the __loss function__
+
+### 2.3 What if the input qubits are in superposition?
+To train quantum circuits using projectQ, it is nature to use truth table 
+as optimizing goal. Based on our knowledge about quantum states, the difference
+between qubits with classical bits is that qubits can be in state of superposition.
+In light of this, there will be infinity number of training data. Can we find a complete data that can guarantee the validity 
+for any input state?
+
+__Yes, we can.__To make this clear, let's consider the operation of quantum circuits-unitary operatin, which is also linear
+operation. In linear space, if we can guarantee the validity for any of its complete base spaces, the quantum circuits will
+be valid for any input.
+
+Based on this, I will train qubits in their computational basis(2^n).
 
 
 # Problem existed:
