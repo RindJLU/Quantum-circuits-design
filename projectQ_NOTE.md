@@ -173,4 +173,28 @@ shadowed/.style={preaction={transform canvas={shift={(0.5pt,-0.5pt)}}, draw=gray
 \end{document}
 ```
 
+## 7. Quantum register and corresponding quantum state.
+When apply 
+````
+a = MainEngine().allocate_qubit()
+````
+This will create a quantum register which stores a qubit. if use 
+````
+a.__str__()
+````
+This will return the register index of a(form 0 on)
 
+## 8. Create new unitary gate.
+```
+# act on sigle qubit
+0.5 * ‘X0 X5’ + 0.3 * ‘Z1 Z2’.
+```
+```angular2html
+# act on n qubits:
+coefficent * local_operator[0] x ... x local_operator[n-1]
+# x is tensor operation
+```
+ Example: 
+```angular2html
+hamiltonian = 0.5 * QubitOperator('X0 X5') + 0.3 * QubitOperator('Z0')
+```
