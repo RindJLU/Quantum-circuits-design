@@ -26,6 +26,17 @@ non-rotation gates)<br>**
 Fidelity with step:
 ![Fidelity with step](https://github.com/RindJLU/Quantum-circuits-design/blob/master/pictures/Figure_1.png)
 
+### 1.3 Group Leader Optimization Algorithm.
+This is was inspired by the importance of the leader in a group. 
+Members in the group would like to learn from the leader and therefore, become more and more like the leader.
+Once the a member of a group is 'better' than the leader, this member will replace the current learder and become the new one.
+To guarantee this will not trapped in a local minimum, creating many groups and crossing the members of these group.
+
+For more information, please view the paper 'Group Leader Optimization Algorithm.'http://www.tandfonline.com/doi/abs/10.1080/00268976.2011.552444
+
+
+
+
 ## 2. Design circuits with projectQ<br>
 ### 2.1 What is the difficulty to use projectQ?<br>
 Firstly, projectQ is not a simulation mathod, but more like a experiment way. This is 

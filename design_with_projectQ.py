@@ -1,61 +1,83 @@
 # coding: utf-8
 import numpy as np
-import projectq.setups.default
-from projectq.ops import Z, X, S, H, CNOT, Measure
+import copy
+from projectq.ops import X, T, S, H, Rz, Measure
 from projectq import MainEngine
-from projectq.backends import CircuitDrawer
-from projectq.meta import Dagger, Control
+from projectq.meta import Control
 
 
-def control(Gate, q_trg, q_ctrl):
+# ======================================================================================================================
+# define truth table
+input = ()
+for i in range(8):
+    a = i//4
+    b = (i-a*4)//2
+    c = (i-a*4-b*2)//1
+    input = input + ([a, b, c],)
+
+output = copy.deepcopy(input[0:6])
+output = output + (input[7],)
+output = output + (input[6],)
+# print(input, output)
+# ======================================================================================================================
+
+# define gates:
+I0 = Rz(0)
+gate = (T, X, S, H)
+def control(ctrl_list, q, eng):
+    Gate = gate[ctrl_list[0]-1]
+    q_trg = q[ctrl_list[1]-1]
+    q_ctrl = q[ctrl_list[2]-1]
     with Control(eng, q_ctrl):
         Gate | q_trg
-    return q_trg
+    return q
 
-# drawing_engine = CircuitDrawer()
-# eng = MainEngine()
+def rand_generator():
+    tof_list = []  # 用列表存储数据
+    for i in range(5):
+        a = np.random.randint(1, 4)
+        b = np.random.randint(1, 3)
+        c = b
+        while c == b:
+            c = np.random.randint(1, 3)
+        tof_list.append([a, b, c])
+    return(tof_list)
+# print(rand_generator())
 
-def Draw(eng, code_list):
-    # code_list contains the code of a quantum circuits, more details see Quantumcircuits_design.py
-    # Store gates using tuble
-    gate_list = (X, Z, S, X)
-    # Store qubits using tuble
-    q = ('',)
-    q += (eng.allocate_qubit(),)
-    q += (eng.allocate_qubit(),)
-    q += (eng.allocate_qubit(),)
-    for i in code_list:
-        gate_index = i[0]
-        gate = gate_list[gate_index - 1]
-        q_trg_index = i[1]
-        q_trg = q[q_trg_index]
-        q_ctrl_index = i[2]
-        q_ctrl = q[q_ctrl_index]
-        q_trg = control(gate, q_trg, q_ctrl)
-    eng.flush()
-    print(drawing_engine.get_latex())
-    # problem existed: Texmarker can not compile it.
+tof_test = rand_generator()
 
-# Create bell pair.
-def create_bell_pair(eng):
-    b1 = eng.allocate_qubit()
-    b2 = eng.allocate_qubit()
+def run(MainEngine, X):
+    ans = ()
+    for k in input:
+        eng = MainEngine()
+        q0, q1, q2 = eng.allocate_qureg(3)
+        q = (q0, q1, q2)
+        for m in k:
+            if m == 1:
+                X | q[m]
+        for i in tof_test:
+            control(i, q, eng)
+        for n in q:
+            Measure | n
+        eng.flush()
+        ans_ele = []
+        for l in q:
+            ans_ele.append(int(l))
+        ans = ans + (ans_ele,)
+    return(ans)
 
-    H | b1
-    CNOT | (b1, b2)
-
-    return b1, b2
-
-# Draw the quantum circuits
-from projectq import MainEngine
-from projectq.backends import CircuitDrawer
+# define loss function: Mean Square
+def loss_fun(ans, output):
+    loss = 0
+    for i in range(len(ans)):
+        for j in range(len(ans[i])):
+            loss += abs(ans[i][j]-output[i][j])
+    return loss
 
 
-# create a main compiler engine
-drawing_engine = CircuitDrawer()
-eng = MainEngine(drawing_engine)
-
-create_bell_pair(eng)
-
-eng.flush()
-print(drawing_engine.get_latex())
+loss_list = []
+for i in range(100):
+    ans = run(MainEngine, X)
+    loss = loss_fun(ans, output)
+    loss_list.append(loss)
+print(min(loss_list))
