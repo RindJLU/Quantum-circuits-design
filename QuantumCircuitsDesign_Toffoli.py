@@ -123,6 +123,10 @@ def loss_fun(Ua, Ut):
     F = np.abs(np.trace(np.dot(Ua, H(Ut))))/(pow(2, 3))
     fidelity_error = 1 - pow(F, 2)
     return fidelity_error
+
+def fid(Ua, Ut):
+    F = np.abs(np.trace(np.dot(Ua, H(Ut)))) / (pow(2, 3))
+    return F
 # test
 # print(loss_fun(tof_test, tof_test))
 # ======================================================================================================================
@@ -147,38 +151,38 @@ def uni_matrix(tof_list):
 # ======================================================================================================================
 # Main----Toffoli Gate
 # -------------------------------------------------------------------------------------------------------------------
-tof_list = [] # 用列表存储数据
-for i in range(5):
-    tof_list.append(rand_generator())
-err = []
-T = 100
-alpha = 0.999
-T_min = pow(10, -3)
-iter_index = 0
-while T > T_min:
-    iter_index += 1
-    error = loss_fun(uni_matrix(tof_list), tof)
-    target_index = np.random.randint(0, 5)
-    target_list_temp = tof_list[target_index]
-    tof_list[target_index] = rand_generator()
-    error_temp = loss_fun(uni_matrix(tof_list), tof)
-    if error_temp < error:
-        pass
-    else:
-        if np.exp(-0.5*(error_temp - error)/T) > np.random.rand(1):
-            pass
-        else:
-            tof_list[target_index] = target_list_temp
-    T *= alpha
-    if iter_index % 10 == 0:
-        err.append([iter_index, error])
-print(uni_matrix(tof_list))
-print(tof_list)
-# 可视化
-import matplotlib.pyplot as plt
-err = np.array(err)
-plt.plot(err[:, 0], err[:, 1])
-plt.show()
+# tof_list = [] # 用列表存储数据
+# for i in range(5):
+#     tof_list.append(rand_generator())
+# err = []
+# T = 100
+# alpha = 0.999
+# T_min = pow(10, -3)
+# iter_index = 0
+# while T > T_min:
+#     iter_index += 1
+#     error = loss_fun(uni_matrix(tof_list), tof)
+#     target_index = np.random.randint(0, 5)
+#     target_list_temp = tof_list[target_index]
+#     tof_list[target_index] = rand_generator()
+#     error_temp = loss_fun(uni_matrix(tof_list), tof)
+#     if error_temp < error:
+#         pass
+#     else:
+#         if np.exp(-0.5*(error_temp - error)/T) > np.random.rand(1):
+#             pass
+#         else:
+#             tof_list[target_index] = target_list_temp
+#     T *= alpha
+#     if iter_index % 10 == 0:
+#         err.append([iter_index, error])
+# print(uni_matrix(tof_list))
+# print(tof_list)
+# # 可视化
+# import matplotlib.pyplot as plt
+# err = np.array(err)
+# plt.plot(err[:, 0], err[:, 1])
+# plt.show()
 # 第一次运行： 10000步
 # [[1, 3, 2], [2, 3, 1], [3, 2, 1], [4, 3, 2], [2, 1, 3]] 标准Toffoli门
 # [[2, 1, 3], [4, 3, 2], [2, 1, 3], [1, 3, 2], [3, 2, 1]]
@@ -188,13 +192,84 @@ plt.show()
 # print(uni_matrix([[4, 3, 2], [4, 3, 1], [2, 3, 1], [3, 1, 3], [3, 1, 3]]))
 # ----------------------------------------------------------------------------------------------------------------------
 # Main----Genetic Algorithm---------------------------------------------------------------------------------------------
+
+# define a function that calculate the prob of the member being selected:
+def fid_prob(group):
+    m_fid = [] # Stories the fidelity of the member in group
+    for g in group:
+        m_fid.append(fid(uni_matrix(g), tof))
+    sum_fid = sum(m_fid)
+    m_prob = [0]
+    for m in range(len(m_fid)):
+        m_prob.append(m_fid[m]/sum_fid + m_prob[m-1])
+    rand_number = np.random.uniform(0, 1)
+    for i in range(0, len(m_prob)-1):
+        if rand_number >= m_prob[i] and rand_number <= m_prob[i+1]:
+            break
+    return i
+# print(fid_prob(member_fidelity))
+
+def var(new_group, m):
+    rand_index1 = np.random.randint(0, 5)  # the index of gate that will be changed
+    rand_index2 = np.random.randint(0, 3)  # the position of the variation in the gate
+    if rand_index2 == 0:
+        new_group[m][rand_index1][0] = np.random.randint(1, 5)
+    elif rand_index2 == 1:
+        trg_index = new_group[m][rand_index1][2]
+        while trg_index == new_group[m][rand_index1][2]:
+            trg_index = np.random.randint(1, 3)
+        new_group[m][rand_index1][1] = trg_index
+    elif rand_index2 == 2:
+        trg_index = new_group[m][rand_index1][1]
+        while trg_index == new_group[m][rand_index1][1]:
+            trg_index = np.random.randint(1, 3)
+        new_group[m][rand_index1][2] = trg_index
+    return new_group
+
+# def cross_select(member_number):
+#     # Assume the number of the members in a group is even.
+#     CrossPair_list = []
+#     for i in range(len(member_number)):
+#         CrossPair_list.append(random.randint(0, len(member_number)-1))
+#     return CrossPair_list
+# print(cross_select(member_fidelity))
+
+# Main:
 # Initial the group
 group = ()
-for i in range(100):
+m_num = 6
+for i in range(m_num):
     tof_list = []  # 用列表存储数据
     for i in range(5):
         tof_list.append(rand_generator())
     group = group + (tof_list,)
 
-for g in group:
-    1
+FID_iter = []
+for iter in range(1000):
+    new_group = ()
+    # Select New Generation
+    for m1 in range(m_num):
+        rand_index = fid_prob(group)
+        new_group = new_group + (group[rand_index],)
+    # Cross according the order that they are selected:
+    pair_num = m_num/2
+    for m2 in range(int(pair_num)):
+        # exchange_index = np.random.randint(0, 5)
+        # exchange_temp = new_group[2*m2][0:exchange_index] # Only exchange the first number of the list ----- exchange the gate
+        # new_group[2*m2][0:exchange_index] = new_group[2*m2+1][0:exchange_index]
+        # new_group[2*m2+1][0:exchange_index] = exchange_temp
+        # Variation:
+        new_group = var(new_group, 2*m2)
+        new_group = var(new_group, 2*m2+1)
+    group = new_group
+    del new_group
+
+    m_fid = []
+    for m in group:
+        m_fid.append(fid(uni_matrix(m), tof))
+    FID_iter.append(max(m_fid))
+print(group)
+print(FID_iter)
+
+a = [[4, 2, 1], [2, 1, 2], [4, 1, 2], [1, 1, 2], [3, 2, 1]]
+print(fid(uni_matrix(a), tof))
