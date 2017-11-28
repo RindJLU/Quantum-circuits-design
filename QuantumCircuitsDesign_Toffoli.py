@@ -210,20 +210,29 @@ def fid_prob(group):
 # print(fid_prob(member_fidelity))
 
 def var(new_group, m):
-    rand_index1 = np.random.randint(0, 5)  # the index of gate that will be changed
+    # create new gate
+    a = np.random.randint(1, 5)
+    b = np.random.randint(1, 4)
+    c = b
+    while c == b:
+        c = np.random.randint(1, 4)
+    # replacing gate:
+    rand_gate_index = np.random.randint(0, 5)
+    ind = len(new_group[rand_gate_index])
     rand_index2 = np.random.randint(0, 3)  # the position of the variation in the gate
-    if rand_index2 == 0:
-        new_group[m][rand_index1][0] = np.random.randint(1, 5)
-    elif rand_index2 == 1:
-        trg_index = new_group[m][rand_index1][2]
-        while trg_index == new_group[m][rand_index1][2]:
-            trg_index = np.random.randint(1, 3)
-        new_group[m][rand_index1][1] = trg_index
-    elif rand_index2 == 2:
-        trg_index = new_group[m][rand_index1][1]
-        while trg_index == new_group[m][rand_index1][1]:
-            trg_index = np.random.randint(1, 3)
-        new_group[m][rand_index1][2] = trg_index
+    new_group[m][rand_gate_index][0:int(ind)-1] = [a, b, c]
+    # if rand_index2 == 0:
+    #     new_group[m][i][0] = np.random.randint(1, 5)
+    # elif rand_index2 == 1:
+    #     trg_index = new_group[m][i][2]
+    #     while trg_index == new_group[m][i][2]:
+    #         trg_index = np.random.randint(1, 3)
+    #     new_group[m][i][1] = trg_index
+    # elif rand_index2 == 2:
+    #     trg_index = new_group[m][i][1]
+    #     while trg_index == new_group[m][i][1]:
+    #         trg_index = np.random.randint(1, 3)
+    #     new_group[m][i][2] = trg_index
     return new_group
 
 # def cross_select(member_number):
@@ -245,7 +254,7 @@ for i in range(m_num):
     group = group + (tof_list,)
 
 FID_iter = []
-for iter in range(1000):
+for iter in range(5000):
     new_group = ()
     # Select New Generation
     for m1 in range(m_num):
@@ -254,10 +263,10 @@ for iter in range(1000):
     # Cross according the order that they are selected:
     pair_num = m_num/2
     for m2 in range(int(pair_num)):
-        # exchange_index = np.random.randint(0, 5)
-        # exchange_temp = new_group[2*m2][0:exchange_index] # Only exchange the first number of the list ----- exchange the gate
-        # new_group[2*m2][0:exchange_index] = new_group[2*m2+1][0:exchange_index]
-        # new_group[2*m2+1][0:exchange_index] = exchange_temp
+        exchange_index = np.random.randint(0, 5)
+        exchange_temp = new_group[2*m2][0:exchange_index] # Only exchange the first number of the list ----- exchange the gate
+        new_group[2*m2][0:exchange_index] = new_group[2*m2+1][0:exchange_index]
+        new_group[2*m2+1][0:exchange_index] = exchange_temp
         # Variation:
         new_group = var(new_group, 2*m2)
         new_group = var(new_group, 2*m2+1)
@@ -270,6 +279,5 @@ for iter in range(1000):
     FID_iter.append(max(m_fid))
 print(group)
 print(FID_iter)
+print(max(FID_iter))
 
-a = [[4, 2, 1], [2, 1, 2], [4, 1, 2], [1, 1, 2], [3, 2, 1]]
-print(fid(uni_matrix(a), tof))
