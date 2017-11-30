@@ -48,7 +48,7 @@ def QT_gate(theta1, theta2):
     return(QT_gate)
 # ----------------------------------------------------------------------------------------------------------------------
 # define quantum teleportation matrix
-QT3 = QT_gate(1.565, 1.565)
+QT3 = QT_gate(1.565, 4.71)
 # print(QT3)
 # Machine Learning Methods:
 

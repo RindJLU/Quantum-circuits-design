@@ -88,7 +88,7 @@ def decode(code_list, gate, gate_index):
         if code_list[2] == 1:
             decode_result = np.kron(controled_gate(gate[index], 0, gate), gate['I'])
         elif code_list[2] == 3:
-            decode_result = np.kron(gate['I'], controled_gate(gate['S'], 1, gate))
+            decode_result = np.kron(gate['I'], controled_gate(gate[index], 1, gate))
         else:
             print('Index Error!')
     elif code_list[1] == 1:
@@ -254,7 +254,7 @@ for i in range(m_num):
     group = group + (tof_list,)
 
 FID_iter = []
-for iter in range(5000):
+for iter in range(1000):
     new_group = ()
     # Select New Generation
     for m1 in range(m_num):
