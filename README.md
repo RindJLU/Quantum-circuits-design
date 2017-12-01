@@ -82,6 +82,26 @@ be valid for any input.
 
 Based on this, I will train qubits in their computational basis(2^n).
 
+__problem__: how to get the state of a quantum qubit without measure in projectq?
+
+## 3. Other optimization method:
+### 3.1 Genetic Algorithm
+The idea of genetic algorithm is to find the fittest individuals in a group. The fitness is defined as the result of
+loss function. The higher the fitness a member in the group has, the more likely this gene of this member be inherent
+to next generation. In addition to inheritance, the genovariation is another approach to change the gene in the group and therefore, 
+keep away the local minimum.
+
+However, for this problem, the GA may not be effective. The reason is in this question, while we search the possible solution of 
+circuits, it is not discontinuous. Changing the gate or the target and controlled qubut can make a big disturbance to the whole system.
+
+### 3.2 Group Leader Optimization Algorithm
+
+
+## 4 Machine learning method:
+### 4.1 Gradient Decent
+Gradient decent is a effective way dealing with continuous problem. Here I use this method to optimize the angle of the rotate gate.
+
+Although this is effective way, the result can easily be trapped to local minimum.
 
 # Problem existed:
 ## 1. INPUT?

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5f38ee4-1a6a-4cec-a574-8de4d248f2a4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WaterMolecule_simulation.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumCircuitsDesign_QTeleportation.py" afterPath="$PROJECT_DIR$/QuantumCircuitsDesign_QTeleportation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py" afterPath="$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +34,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="QuantumCircuitsDesign_GLOA.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuantumCircuitsDesign_GLOA.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
@@ -71,6 +68,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="270">
+                <caret line="103" column="82" lean-forward="false" selection-start-line="103" selection-start-column="82" selection-end-line="103" selection-end-column="82" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="WaterMolecule_simulation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WaterMolecule_simulation.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,13 +109,13 @@
         <option value="$PROJECT_DIR$/projectQ_NOTE.md" />
         <option value="$PROJECT_DIR$/Quantumcircuits_design.py" />
         <option value="$PROJECT_DIR$/papers/QuantumCircuitsDesign_Toffoli.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/design_with_projectQ.py" />
         <option value="$PROJECT_DIR$/quantum_circuits_design_QT.py" />
         <option value="$PROJECT_DIR$/QuantumCircuitsDesign_QTeleportation.py" />
         <option value="$PROJECT_DIR$/WaterMolecule_simulation.py" />
         <option value="$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py" />
         <option value="$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -383,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511885675415</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Created GLOA method&#10;Edited on Nov.30 22:14.">
+      <created>1512051294392</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1512051294392</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -456,7 +473,8 @@
     <MESSAGE value="Add Genetic Algorithm&#10;Edited on Nov.26 21.35." />
     <MESSAGE value="Edit Genetic Algorithm&#10;Edited on Nov.27 21.28." />
     <MESSAGE value="Edit QT machine learning methods&#10;Edited on Nov.29 00:14." />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit QT machine learning methods&#10;Edited on Nov.29 00:14." />
+    <MESSAGE value="Created GLOA method&#10;Edited on Nov.30 22:14." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created GLOA method&#10;Edited on Nov.30 22:14." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -875,21 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="430">
-            <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quantum_circuits_design_QT.py" />
     <entry file="file://$PROJECT_DIR$/WaterMolecule_simulation.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -924,6 +927,22 @@
           <folding>
             <element signature="e#17#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="270">
+            <caret line="103" column="82" lean-forward="false" selection-start-line="103" selection-start-column="82" selection-end-line="103" selection-end-column="82" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
