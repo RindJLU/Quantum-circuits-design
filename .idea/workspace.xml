@@ -71,9 +71,9 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="270">
-                <caret line="103" column="82" lean-forward="false" selection-start-line="103" selection-start-column="82" selection-end-line="103" selection-end-column="82" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="96">
+                <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -400,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512051294392</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add README chapter 3,4.&#10;Edited on Dec.1 10:54.">
+      <created>1512096890360</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1512096890360</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -474,7 +481,8 @@
     <MESSAGE value="Edit Genetic Algorithm&#10;Edited on Nov.27 21.28." />
     <MESSAGE value="Edit QT machine learning methods&#10;Edited on Nov.29 00:14." />
     <MESSAGE value="Created GLOA method&#10;Edited on Nov.30 22:14." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created GLOA method&#10;Edited on Nov.30 22:14." />
+    <MESSAGE value="Add README chapter 3,4.&#10;Edited on Dec.1 10:54." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add README chapter 3,4.&#10;Edited on Dec.1 10:54." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -937,9 +945,9 @@
         </state>
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="270">
-            <caret line="103" column="82" lean-forward="false" selection-start-line="103" selection-start-column="82" selection-end-line="103" selection-end-column="82" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="96">
+            <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
