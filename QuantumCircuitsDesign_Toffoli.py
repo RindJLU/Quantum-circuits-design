@@ -4,6 +4,7 @@
 # 1. 张量积操作
 import numpy as np
 import torch
+import matplotlib.pyplot as plt
 
 def kron(a, b):
     a = a.numpy()
@@ -192,92 +193,210 @@ def uni_matrix(tof_list):
 # print(uni_matrix([[4, 3, 2], [4, 3, 1], [2, 3, 1], [3, 1, 3], [3, 1, 3]]))
 # ----------------------------------------------------------------------------------------------------------------------
 # Main----Genetic Algorithm---------------------------------------------------------------------------------------------
+#
+# # define a function that calculate the prob of the member being selected:
+# def fid_prob(group):
+#     m_fid = [] # Stories the fidelity of the member in group
+#     for g in group:
+#         m_fid.append(fid(uni_matrix(g), tof))
+#     sum_fid = sum(m_fid)
+#     m_prob = [0]
+#     for m in range(len(m_fid)):
+#         m_prob.append(m_fid[m]/sum_fid + m_prob[m-1])
+#     rand_number = np.random.uniform(0, 1)
+#     for i in range(0, len(m_prob)-1):
+#         if rand_number >= m_prob[i] and rand_number <= m_prob[i+1]:
+#             break
+#     return i
+# # print(fid_prob(member_fidelity))
+#
+# def var(new_group, m):
+#     # create new gate
+#     a = np.random.randint(1, 5)
+#     b = np.random.randint(1, 4)
+#     c = b
+#     while c == b:
+#         c = np.random.randint(1, 4)
+#     # replacing gate:
+#     rand_gate_index = np.random.randint(0, 5)
+#     ind = len(new_group[rand_gate_index])
+#     rand_index2 = np.random.randint(0, 3)  # the position of the variation in the gate
+#     new_group[m][rand_gate_index][0:int(ind)-1] = [a, b, c]
+#     # if rand_index2 == 0:
+#     #     new_group[m][i][0] = np.random.randint(1, 5)
+#     # elif rand_index2 == 1:
+#     #     trg_index = new_group[m][i][2]
+#     #     while trg_index == new_group[m][i][2]:
+#     #         trg_index = np.random.randint(1, 3)
+#     #     new_group[m][i][1] = trg_index
+#     # elif rand_index2 == 2:
+#     #     trg_index = new_group[m][i][1]
+#     #     while trg_index == new_group[m][i][1]:
+#     #         trg_index = np.random.randint(1, 3)
+#     #     new_group[m][i][2] = trg_index
+#     return new_group
+#
+# # def cross_select(member_number):
+# #     # Assume the number of the members in a group is even.
+# #     CrossPair_list = []
+# #     for i in range(len(member_number)):
+# #         CrossPair_list.append(random.randint(0, len(member_number)-1))
+# #     return CrossPair_list
+# # print(cross_select(member_fidelity))
+#
+# # Main:
+# # Initial the group
+# group = ()
+# m_num = 6
+# for i in range(m_num):
+#     tof_list = []  # 用列表存储数据
+#     for i in range(5):
+#         tof_list.append(rand_generator())
+#     group = group + (tof_list,)
+#
+# FID_iter = []
+# for iter in range(1000):
+#     new_group = ()
+#     # Select New Generation
+#     for m1 in range(m_num):
+#         rand_index = fid_prob(group)
+#         new_group = new_group + (group[rand_index],)
+#     # Cross according the order that they are selected:
+#     pair_num = m_num/2
+#     for m2 in range(int(pair_num)):
+#         exchange_index = np.random.randint(0, 5)
+#         exchange_temp = new_group[2*m2][0:exchange_index] # Only exchange the first number of the list ----- exchange the gate
+#         new_group[2*m2][0:exchange_index] = new_group[2*m2+1][0:exchange_index]
+#         new_group[2*m2+1][0:exchange_index] = exchange_temp
+#         # Variation:
+#         new_group = var(new_group, 2*m2)
+#         new_group = var(new_group, 2*m2+1)
+#     group = new_group
+#     del new_group
+#
+#     m_fid = []
+#     for m in group:
+#         m_fid.append(fid(uni_matrix(m), tof))
+#     FID_iter.append(max(m_fid))
+# print(group)
+# print(FID_iter)
+# print(max(FID_iter))
 
-# define a function that calculate the prob of the member being selected:
-def fid_prob(group):
-    m_fid = [] # Stories the fidelity of the member in group
-    for g in group:
-        m_fid.append(fid(uni_matrix(g), tof))
-    sum_fid = sum(m_fid)
-    m_prob = [0]
-    for m in range(len(m_fid)):
-        m_prob.append(m_fid[m]/sum_fid + m_prob[m-1])
-    rand_number = np.random.uniform(0, 1)
-    for i in range(0, len(m_prob)-1):
-        if rand_number >= m_prob[i] and rand_number <= m_prob[i+1]:
-            break
-    return i
-# print(fid_prob(member_fidelity))
+# ======================================================================================================================
+# GLOA
 
-def var(new_group, m):
-    # create new gate
-    a = np.random.randint(1, 5)
-    b = np.random.randint(1, 4)
-    c = b
-    while c == b:
-        c = np.random.randint(1, 4)
-    # replacing gate:
-    rand_gate_index = np.random.randint(0, 5)
-    ind = len(new_group[rand_gate_index])
-    rand_index2 = np.random.randint(0, 3)  # the position of the variation in the gate
-    new_group[m][rand_gate_index][0:int(ind)-1] = [a, b, c]
-    # if rand_index2 == 0:
-    #     new_group[m][i][0] = np.random.randint(1, 5)
-    # elif rand_index2 == 1:
-    #     trg_index = new_group[m][i][2]
-    #     while trg_index == new_group[m][i][2]:
-    #         trg_index = np.random.randint(1, 3)
-    #     new_group[m][i][1] = trg_index
-    # elif rand_index2 == 2:
-    #     trg_index = new_group[m][i][1]
-    #     while trg_index == new_group[m][i][1]:
-    #         trg_index = np.random.randint(1, 3)
-    #     new_group[m][i][2] = trg_index
-    return new_group
+# gate_index = ['V', 'Z', 'S', 'V_dug']
+# initial the circuits: eight gates in a circuits, include 2 single qubit gate
+def inital_circuits(n):
+    circuits_list = []
+    for i in range(n):
+        gate_index = np.random.randint(1, 5)
+        gate_tar = np.random.randint(1, 4) # refers to the target index of a controlled gate
+        gate_ctrl = gate_tar
+        while gate_ctrl == gate_tar:
+            gate_ctrl = np.random.randint(1, 4)
+        circuits_list.append([gate_index, gate_tar, gate_ctrl])
+    return(circuits_list)
 
-# def cross_select(member_number):
-#     # Assume the number of the members in a group is even.
-#     CrossPair_list = []
-#     for i in range(len(member_number)):
-#         CrossPair_list.append(random.randint(0, len(member_number)-1))
-#     return CrossPair_list
-# print(cross_select(member_fidelity))
+# define 25 groups with 15 population in each group.
+Group = ()
+for group_index in range(6):
+    single_group = ()
+    for i in range(6):
+        single_group = single_group + (inital_circuits(5),)
+    Group = Group + (single_group,)
+# print(Group)
+
+def exc(Group, g1, g2, m):
+    for i in range(len(Group[g1][m])): # exchange the mth member in group1 and group2
+        temp = Group[g1][m][i]
+        Group[g1][m][i] = Group[g2][m][i]
+        Group[g2][m][i] = temp
+    return Group
+
+def fid_sort(vec): # vec contains the fid a member of a group;
+    vec = np.array(vec)
+    index_list = np.argsort(vec) # this gives the index of member in a group accroding to the fideility.
+    return index_list
+
+def Group_del(Group):
+    Group_del = () # contains member index, the first one is the leader of the group.
+    NewGroup = ()
+    for group in Group:
+        mem_sorted = ()
+        mem_fid_sorted = []
+        mem_fid = []
+        for mem in group:
+            mem_fid.append(loss_fun(uni_matrix(mem), tof))
+        fid_list = fid_sort(mem_fid)
+        for i in range(len(fid_list)):
+            mem_sorted = mem_sorted + (group[fid_list[i]],)
+            mem_fid_sorted.append(mem_fid[fid_list[i]])
+        NewGroup = NewGroup + (mem_sorted,)
+        Group_del = Group_del + (mem_fid_sorted,)
+    return NewGroup, Group_del
+# print(Group_del(Group))
 
 # Main:
-# Initial the group
-group = ()
-m_num = 6
-for i in range(m_num):
-    tof_list = []  # 用列表存储数据
-    for i in range(5):
-        tof_list.append(rand_generator())
-    group = group + (tof_list,)
+min_fed = [1]
+iter = 0
+stop_index = 1
+while stop_index == 1 and iter <= 1000:
+    Group, Group_fed = Group_del(Group)
+    # first check the group, is there any member in the group reaches minimize loss.
+    fid = []
+    for g in range(len(Group)):
+        for m in range(len(Group[g])):
+            if Group_fed[g][m] <= 0.00001:
+                print('Find a solution!')
+                print(Group[g][m])
+                stop_index = 0
+            else:
+                fid.append(min(Group_fed[g]))
+    min_fed.append(min(fid))
 
-FID_iter = []
-for iter in range(1000):
-    new_group = ()
-    # Select New Generation
-    for m1 in range(m_num):
-        rand_index = fid_prob(group)
-        new_group = new_group + (group[rand_index],)
-    # Cross according the order that they are selected:
-    pair_num = m_num/2
-    for m2 in range(int(pair_num)):
-        exchange_index = np.random.randint(0, 5)
-        exchange_temp = new_group[2*m2][0:exchange_index] # Only exchange the first number of the list ----- exchange the gate
-        new_group[2*m2][0:exchange_index] = new_group[2*m2+1][0:exchange_index]
-        new_group[2*m2+1][0:exchange_index] = exchange_temp
-        # Variation:
-        new_group = var(new_group, 2*m2)
-        new_group = var(new_group, 2*m2+1)
-    group = new_group
-    del new_group
+    for grp in Group:
+        for num in range(len(Group[0])-1):
+            mem_index = num + 1
+            mem_temp = grp[mem_index] # store the old member
+            # create new member
+            leader_part_index = np.random.randint(0, 5)
+            # choose one gate to be changed, simply replace it by the
+            # corresponding part in the leader to it.
+            grp[mem_index][leader_part_index] = grp[0][leader_part_index]
+            # randomly choose one gate to be a new gate
+            new_gate_index = np.random.randint(0, 5)
+            grp[mem_index][new_gate_index] = inital_circuits(1)[0]
 
-    m_fid = []
-    for m in group:
-        m_fid.append(fid(uni_matrix(m), tof))
-    FID_iter.append(max(m_fid))
-print(group)
-print(FID_iter)
-print(max(FID_iter))
+            # check
+            if loss_fun(uni_matrix(grp[mem_index]), tof) >= loss_fun(uni_matrix(mem_temp), tof):
+                for i in range(len(mem_temp)):
+                    grp[mem_index][i] = mem_temp[i]
+    # cross different groups, also follows the replacement criteria???
+    # Here I only exchange the last two member
+    if iter % 20 == 0:
+        a = [0, 1, 2, 3, 4, 5]
+        np.random.shuffle(a) # disorder the list, and exchange every pair.
+        for i in range(int(len(a)/2)):
+            for j in range(2):
+                changed_mem_index = np.random.randint(1, 5)
+                Group = exc(Group, a[2 * i], a[2 * i + 1], changed_mem_index)
 
+# Visualization
+plt.plot(min_fed)
+plt.title('Fidelity Error vs. Number of Iterations')
+plt.xlabel('Number of Iterations')
+plt.ylabel('Fidelity Error')
+print(Group_fed)
+plt.show()
+
+# Solutions found:
+# [[2, 3, 1], [4, 3, 2], [2, 3, 1], [3, 2, 1], [1, 3, 2]]
+# [[2, 3, 1], [4, 3, 2], [2, 3, 1], [1, 3, 2], [3, 2, 1]]
+# [[3, 2, 1], [1, 3, 2], [2, 1, 3], [4, 3, 2], [2, 3, 1]]
+# [[2, 3, 2], [4, 3, 1], [3, 2, 1], [2, 3, 2], [1, 3, 1]]
+# [[2, 1, 3], [4, 3, 2], [2, 1, 3], [3, 2, 1], [1, 3, 2]]
+# [[3, 2, 1], [2, 1, 3], [4, 3, 2], [2, 1, 3], [1, 3, 2]]
+# [[3, 2, 1], [1, 3, 2], [2, 3, 1], [4, 3, 2], [2, 1, 3]]
+# [[3, 2, 1], [2, 3, 2], [4, 3, 1], [2, 3, 2], [1, 3, 1]]
+# [[2, 1, 3], [4, 3, 2], [2, 3, 1], [1, 3, 2], [3, 2, 1]]

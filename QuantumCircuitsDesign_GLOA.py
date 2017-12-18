@@ -119,7 +119,7 @@ print('Running QuantumCircuitsDesign.py:')
 # initial the circuits: eight gates in a circuits, include 2 single qubit gate
 def inital_circuits():
     circuits_tuple = ()
-    for i in range(8):
+    for i in range(6):
         gate_index = np.random.randint(0, 4)
         gate_tar = np.random.randint(1, 4) # refers to the target index of a controlled gate
         gate_ctrl = np.random.randint(1, 4)
@@ -169,26 +169,32 @@ def inital_circuits():
 
 # define 25 groups with 15 population in each group.
 Group = ()
-for group_index in range(10):
+for group_index in range(1):
     single_group = ()
     for i in range(10):
         single_group = single_group + (inital_circuits(),)
     Group = Group + (single_group,)
 # print(Group)
 
+def fid_sort(vec): # vec contains the fid a member of a group;
+    vec = np.array(vec)
+    index_list = np.argsort(vec) # this gives the index of member in a group accroding to the fideility.
+    return index_list
 
 def Group_information(Group):
-    Group_info = ()
+    Group_info = () # contains member index, the first one is the leader of the group.
     for group in Group:
-        group_info = np.zeros((2, len(group)))
-        for member_index in range(len(group)):
-            group_info[0, member_index] = member_index
-            group_info[1, member_index] = loss_fun(code2matrix(group[member_index], gate, rotate_gate), tof)
+        mem_sorted = ()
+        mem_fid_sorted = []
+        mem_fid = []
+        for mem in group:
+            mem_fid.append(loss_fun(code2matrix(mem, gate, rotate_gate), tof))
+        fid_list = fid_sort(mem_fid)
+        for i in range(len(fid_list)):
+            mem_sorted = mem_sorted + (group[fid_list[i]])
+            mem_fid_sorted.append(mem_fid[fid_list[i]])
+        group_info = (mem_sorted, mem_fid_sorted)
         Group_info = Group_info + (group_info,)
-        p = int(group_info[1, :].index(np.max(group_info[1, :])))
-        temp = group_info[1, 0]
-        group_info[1, 0] = group_info[1, p]
-        group_info[1, p] = temp
     return(Group_info)
 print(Group_information(Group))
 

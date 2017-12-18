@@ -93,6 +93,33 @@ To guarantee this will not trapped in a local minimum, creating many groups and 
 
 For more information, please view the paper 'Group Leader Optimization Algorithm.'http://www.tandfonline.com/doi/abs/10.1080/00268976.2011.552444
 
+#### IMPLEMENTATION
+Here I apply the GLOA algrithm to a simple problem-designing Toffoli gate:
+
+__Preparation:__\
+In the first place, I created six groups, each of which contains six members(here, every member refers to a possible solution). 
+Next, I defined a function that could calculate the fidelity of all groups and sort the member of a group according to its fidelity.
+and the first member of one group, which has the biggest fidelity(least loss), would be the leader of the group.
+
+__Optimization Process__\
+The Group Leader Optimization Algorithm, as the name implies, is a model that make advantages of the influence of leaders in 
+social groups, where the members of the group are influenced by the leader, and therefore, their behavior is increasingly similar to the leaders'.
+Hence, while optimization, the effect of a leader must be considered.
+
+1. creating new members:\
+For every member in a group(including the leader), creating a new version of it, and replace the old member according to the __Replacement Criteria__.
+The new member follows: __New member = r1 portion of old member + r2 portion of the leader + r3 portion of random__
+
+__Replacement Criteria__\
+If the loss of new member is less than the old member, then replace the old member.\
+Once the change for all the members(except the leader) is done, then use the function I designed in __Preparation__ to sort
+the new group. Here the leader may be changed if one of its member has less loss than itself.
+
+2. Crossover different groups:\
+Every 10 iterations, make a cross of different groups. Randomly select two index of the member(not the leader) in a group, and randomly choose 
+groups do the crossover. 
+
+### Result\
 
 
 
@@ -101,6 +128,9 @@ For more information, please view the paper 'Group Leader Optimization Algorithm
 Gradient decent is a effective way dealing with continuous problem. Here I use this method to optimize the angle of the rotate gate.
 
 Although this is effective way, the result can easily be trapped to local minimum.
+
+
+## 5. Matrix Decomposing:
 
 # Problem existed:
 ## 1. INPUT?
@@ -112,5 +142,6 @@ How to represnt controled gate in correspoding nueral network? This may equal to
 Currently, my though for this problem is to find a function linking control qubit and target qubit, which can generate the result of correspoding controled gate operation.<br>
 __There are several papers that discuss this problems, see fold 'papers'.__
 ![paper](https://github.com/RindJLU/Quantum-circuits-design/blob/master/papers/%E5%9F%BA%E4%BA%8E%E9%87%8F%E5%AD%90%E9%97%A8%E7%BA%BF%E8%B7%AF%E7%9A%84%E9%87%8F%E5%AD%90%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%E5%8F%8A%E7%AE%97%E6%B3%95.pdf)
+
 
 
