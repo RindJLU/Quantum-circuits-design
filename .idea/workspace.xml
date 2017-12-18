@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5f38ee4-1a6a-4cec-a574-8de4d248f2a4" name="Default" comment="">
+    <list default="true" id="f5f38ee4-1a6a-4cec-a574-8de4d248f2a4" name="Default" comment="Add GLOA in Toffoli gate design.&#10;Edited on Dec.18 15:23.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/Group leaders optimization algorithm.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/Learn unitary transform from a finate examples.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/QNN  On Randomization of Neural Networks as a Form of Post-learning Strategy.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/Quantum Circuits for General Multiqubit Gate.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/Senellart_et_al-2017-Nature_Nanotechnology.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/GLOA_Toffoli.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/GLOA_Toffoli2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/GLOA_Toffoli3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/GLOA_Toffoli4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/GLOA_example.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/.idea/papers.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/.idea/preferred-vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py" afterPath="$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py" afterPath="$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,7 +63,7 @@
       <file leaf-file-name="QuantumCircuitsDesign_Toffoli.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2224">
+            <state relative-caret-position="2368">
               <caret line="402" column="0" lean-forward="true" selection-start-line="402" selection-start-column="0" selection-end-line="402" selection-end-column="0" />
               <folding>
                 <element signature="e#82#100#0" expanded="true" />
@@ -147,6 +159,16 @@
             <path>
               <item name="Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="papers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="pictures" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -409,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512097797021</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add GLOA in Toffoli gate design.&#10;Edited on Dec.18 15:23.">
+      <created>1513581864220</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1513581864220</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -423,7 +452,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -433,7 +461,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36408567" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09455371" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09455371" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32072368" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -494,7 +522,8 @@
     <MESSAGE value="Created GLOA method&#10;Edited on Nov.30 22:14." />
     <MESSAGE value="Add README chapter 3,4.&#10;Edited on Dec.1 10:54." />
     <MESSAGE value="Edited on Dec.1 10:54." />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited on Dec.1 10:54." />
+    <MESSAGE value="Add GLOA in Toffoli gate design.&#10;Edited on Dec.18 15:23." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add GLOA in Toffoli gate design.&#10;Edited on Dec.18 15:23." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -953,7 +982,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2224">
+        <state relative-caret-position="2368">
           <caret line="402" column="0" lean-forward="true" selection-start-line="402" selection-start-column="0" selection-end-line="402" selection-end-column="0" />
           <folding>
             <element signature="e#82#100#0" expanded="true" />
