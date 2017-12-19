@@ -119,21 +119,21 @@ the new group. Here the leader may be changed if one of its member has less loss
 Every 10 iterations, make a cross of different groups. Randomly select two index of the member(not the leader) in a group, and randomly choose 
 groups do the crossover. 
 
-### Result\
+### Result
 ![GLOA_examples](https://github.com/RindJLU/Quantum-circuits-design/blob/master/pictures/GLOA_example.png)\
+From the picture above, we can see that the GLOA is much faster than the Simulated Annealing, although it is not very stable(iterations rangeing
+from 150 to 700).
 
-``
-Solutions found:
-\[[2, 3, 1], [4, 3, 2], [2, 3, 1], [3, 2, 1], [1, 3, 2]]<br>
-\[[2, 3, 1], [4, 3, 2], [2, 3, 1], [1, 3, 2], [3, 2, 1]]<br>
-\[[3, 2, 1], [1, 3, 2], [2, 1, 3], [4, 3, 2], [2, 3, 1]]<br>
-\[[2, 3, 2], [4, 3, 1], [3, 2, 1], [2, 3, 2], [1, 3, 1]]<br>
-\[[2, 1, 3], [4, 3, 2], [2, 1, 3], [3, 2, 1], [1, 3, 2]]<br>
-\[[3, 2, 1], [2, 1, 3], [4, 3, 2], [2, 1, 3], [1, 3, 2]]<br>
-\[[3, 2, 1], [1, 3, 2], [2, 3, 1], [4, 3, 2], [2, 1, 3]]<br>
-\[[3, 2, 1], [2, 3, 2], [4, 3, 1], [2, 3, 2], [1, 3, 1]]<br>
-\[[2, 1, 3], [4, 3, 2], [2, 3, 1], [1, 3, 2], [3, 2, 1]]<br>
-``
+Solutions found:\
+\[[2, 3, 1], [4, 3, 2], [2, 3, 1], [3, 2, 1], [1, 3, 2]]\
+\[[2, 3, 1], [4, 3, 2], [2, 3, 1], [1, 3, 2], [3, 2, 1]]\
+\[[3, 2, 1], [1, 3, 2], [2, 1, 3], [4, 3, 2], [2, 3, 1]]\
+\[[2, 3, 2], [4, 3, 1], [3, 2, 1], [2, 3, 2], [1, 3, 1]]\
+\[[2, 1, 3], [4, 3, 2], [2, 1, 3], [3, 2, 1], [1, 3, 2]]\
+\[[3, 2, 1], [2, 1, 3], [4, 3, 2], [2, 1, 3], [1, 3, 2]]\
+\[[3, 2, 1], [1, 3, 2], [2, 3, 1], [4, 3, 2], [2, 1, 3]]\
+\[[3, 2, 1], [2, 3, 2], [4, 3, 1], [2, 3, 2], [1, 3, 1]]\
+\[[2, 1, 3], [4, 3, 2], [2, 3, 1], [1, 3, 2], [3, 2, 1]]
 
 
 

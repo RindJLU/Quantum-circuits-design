@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5f38ee4-1a6a-4cec-a574-8de4d248f2a4" name="Default" comment="Add GLOA in Toffoli gate design.&#10;Edited on Dec.18 15:23.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/Group leaders optimization algorithm.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/Learn unitary transform from a finate examples.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/QNN  On Randomization of Neural Networks as a Form of Post-learning Strategy.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/Quantum Circuits for General Multiqubit Gate.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/Senellart_et_al-2017-Nature_Nanotechnology.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/GLOA_Toffoli.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/GLOA_Toffoli2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/GLOA_Toffoli3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/GLOA_Toffoli4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/GLOA_example.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/.idea/papers.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/.idea/preferred-vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/.idea/workspace.xml" />
+    <list default="true" id="f5f38ee4-1a6a-4cec-a574-8de4d248f2a4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/papers/Object-Oriented Programming_GA.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py" afterPath="$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,10 +18,11 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Project$Quantumcircuits_design.coverage" NAME="Quantumcircuits_design Coverage Results" MODIFIED="1511520748587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$QuantumCircuitsDesign_QTeleportation.coverage" NAME="QuantumCircuitsDesign_QTeleportation Coverage Results" MODIFIED="1511930284657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Project$QuantumCircuitsDesign_Toffoli.coverage" NAME="QuantumCircuitsDesign_Toffoli Coverage Results" MODIFIED="1513581266221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Project$QuantumCircuitsDesign_Toffoli.coverage" NAME="QuantumCircuitsDesign_Toffoli Coverage Results" MODIFIED="1513683721354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$design_with_projectQ.coverage" NAME="design_with_projectQ Coverage Results" MODIFIED="1511691948262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$WaterMolecule_simulation.coverage" NAME="WaterMolecule_simulation Coverage Results" MODIFIED="1511933862032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$QuantumCircuitsDesign_GLOA.coverage" NAME="QuantumCircuitsDesign_GLOA Coverage Results" MODIFIED="1513502805609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Project$Object_Oriented_Programming_GA.coverage" NAME="Object-Oriented Programming_GA Coverage Results" MODIFIED="1513687360368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/papers" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -48,10 +37,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Object-Oriented Programming_GA.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/papers/Object-Oriented Programming_GA.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2594">
+              <caret line="323" column="26" lean-forward="true" selection-start-line="323" selection-start-column="26" selection-end-line="323" selection-end-column="26" />
+              <folding>
+                <element signature="e#4404#4422#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="QuantumCircuitsDesign_GLOA.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2016">
+            <state relative-caret-position="16">
               <caret line="127" column="26" lean-forward="false" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
               <folding>
                 <element signature="e#17#35#0" expanded="true" />
@@ -60,13 +61,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuantumCircuitsDesign_Toffoli.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuantumCircuitsDesign_Toffoli.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2368">
-              <caret line="402" column="0" lean-forward="true" selection-start-line="402" selection-start-column="0" selection-end-line="402" selection-end-column="0" />
+            <state relative-caret-position="-3328">
+              <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
               <folding>
-                <element signature="e#82#100#0" expanded="true" />
+                <element signature="e#72#90#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,8 +77,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="748">
-                <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+              <first_editor relative-caret-position="33">
+                <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -120,6 +121,7 @@
         <option value="$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py" />
+        <option value="$PROJECT_DIR$/papers/Object-Oriented Programming_GA.py" />
       </list>
     </option>
   </component>
@@ -192,7 +194,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.QuantumCircuitsDesign_Toffoli">
+  <component name="RunManager" selected="Python.Object-Oriented Programming_GA">
+    <configuration name="Object-Oriented Programming_GA" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/papers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/papers/Object-Oriented Programming_GA.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="QuantumCircuitsDesign_GLOA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -265,38 +285,20 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="design_with_projectQ" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/design_with_projectQ.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.design_with_projectQ" />
-      <item index="1" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_Toffoli" />
-      <item index="2" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_QTeleportation" />
-      <item index="3" class="java.lang.String" itemvalue="Python.WaterMolecule_simulation" />
-      <item index="4" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_GLOA" />
+      <item index="0" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_Toffoli" />
+      <item index="1" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_QTeleportation" />
+      <item index="2" class="java.lang.String" itemvalue="Python.WaterMolecule_simulation" />
+      <item index="3" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_GLOA" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Object-Oriented Programming_GA" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_Toffoli" />
-        <item index="1" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_GLOA" />
-        <item index="2" class="java.lang.String" itemvalue="Python.WaterMolecule_simulation" />
-        <item index="3" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_QTeleportation" />
-        <item index="4" class="java.lang.String" itemvalue="Python.design_with_projectQ" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Object-Oriented Programming_GA" />
+        <item index="1" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_Toffoli" />
+        <item index="2" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_GLOA" />
+        <item index="3" class="java.lang.String" itemvalue="Python.WaterMolecule_simulation" />
+        <item index="4" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_QTeleportation" />
       </list>
     </recent_temporary>
   </component>
@@ -438,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513581864220</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add some papers and pictures.&#10;Edited on Dec.18 15:23.">
+      <created>1513582229727</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1513582229727</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -452,6 +461,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -461,7 +471,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36408567" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09455371" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21331316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32072368" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -523,7 +533,8 @@
     <MESSAGE value="Add README chapter 3,4.&#10;Edited on Dec.1 10:54." />
     <MESSAGE value="Edited on Dec.1 10:54." />
     <MESSAGE value="Add GLOA in Toffoli gate design.&#10;Edited on Dec.18 15:23." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add GLOA in Toffoli gate design.&#10;Edited on Dec.18 15:23." />
+    <MESSAGE value="Add some papers and pictures.&#10;Edited on Dec.18 15:23." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some papers and pictures.&#10;Edited on Dec.18 15:23." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -539,16 +550,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1840">
-          <caret line="115" column="3" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="118" selection-end-column="13" />
-          <folding>
-            <element signature="e#82#100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_QTeleportation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -561,7 +562,7 @@
         <state relative-caret-position="1840">
           <caret line="115" column="3" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="118" selection-end-column="13" />
           <folding>
-            <element signature="e#82#100#0" expanded="true" />
+            <element signature="e#72#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -585,7 +586,7 @@
         <state relative-caret-position="2272">
           <caret line="142" column="3" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="146" selection-end-column="19" />
           <folding>
-            <element signature="e#82#100#0" expanded="true" />
+            <element signature="e#72#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -619,7 +620,7 @@
         <state relative-caret-position="4144">
           <caret line="259" column="61" lean-forward="true" selection-start-line="259" selection-start-column="61" selection-end-line="259" selection-end-column="61" />
           <folding>
-            <element signature="e#82#100#0" expanded="true" />
+            <element signature="e#72#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -653,7 +654,7 @@
         <state relative-caret-position="3184">
           <caret line="199" column="5" lean-forward="false" selection-start-line="199" selection-start-column="5" selection-end-line="199" selection-end-column="5" />
           <folding>
-            <element signature="e#82#100#0" expanded="true" />
+            <element signature="e#72#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -690,7 +691,7 @@
         <state relative-caret-position="2400">
           <caret line="150" column="4" lean-forward="false" selection-start-line="150" selection-start-column="4" selection-end-line="150" selection-end-column="4" />
           <folding>
-            <element signature="e#82#100#0" expanded="true" />
+            <element signature="e#72#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -727,7 +728,7 @@
         <state relative-caret-position="2400">
           <caret line="150" column="4" lean-forward="false" selection-start-line="150" selection-start-column="4" selection-end-line="150" selection-end-column="4" />
           <folding>
-            <element signature="e#82#100#0" expanded="true" />
+            <element signature="e#72#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -771,7 +772,7 @@
         <state relative-caret-position="2960">
           <caret line="186" column="3" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="57" />
           <folding>
-            <element signature="e#82#100#0" expanded="true" />
+            <element signature="e#72#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -831,7 +832,7 @@
         <state relative-caret-position="2976">
           <caret line="186" column="3" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="57" />
           <folding>
-            <element signature="e#82#100#0" expanded="true" />
+            <element signature="e#72#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -861,7 +862,7 @@
         <state relative-caret-position="2960">
           <caret line="186" column="3" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="57" />
           <folding>
-            <element signature="e#82#100#0" expanded="true" />
+            <element signature="e#72#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -954,21 +955,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="127" column="26" lean-forward="false" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
-          <folding>
-            <element signature="e#17#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="748">
-            <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <first_editor relative-caret-position="33">
+            <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -980,12 +971,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="127" column="26" lean-forward="false" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
+          <folding>
+            <element signature="e#17#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2368">
-          <caret line="402" column="0" lean-forward="true" selection-start-line="402" selection-start-column="0" selection-end-line="402" selection-end-column="0" />
+        <state relative-caret-position="-3328">
+          <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
           <folding>
-            <element signature="e#82#100#0" expanded="true" />
+            <element signature="e#72#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papers/Object-Oriented Programming_GA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2594">
+          <caret line="323" column="26" lean-forward="true" selection-start-line="323" selection-start-column="26" selection-end-line="323" selection-end-column="26" />
+          <folding>
+            <element signature="e#4404#4422#0" expanded="true" />
           </folding>
         </state>
       </provider>
