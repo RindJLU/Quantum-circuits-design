@@ -39,7 +39,7 @@
       <file leaf-file-name="QuantumCircuitsDesign_GLOA.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
+            <state relative-caret-position="-512">
               <caret line="127" column="26" lean-forward="false" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
               <folding>
                 <element signature="e#17#35#0" expanded="true" />
@@ -51,8 +51,8 @@
       <file leaf-file-name="QuantumCircuitsDesign_Toffoli.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4411">
-              <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+            <state relative-caret-position="235">
+              <caret line="232" column="19" lean-forward="true" selection-start-line="232" selection-start-column="19" selection-end-line="232" selection-end-column="19" />
               <folding>
                 <element signature="e#72#90#0" expanded="true" />
               </folding>
@@ -63,9 +63,9 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="139">
-                <caret line="94" column="67" lean-forward="false" selection-start-line="94" selection-start-column="67" selection-end-line="94" selection-end-column="67" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="83">
+                <caret line="99" column="75" lean-forward="false" selection-start-line="99" selection-start-column="75" selection-end-line="99" selection-end-column="75" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -445,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513763527604</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Edited on Dec.20 18:02">
+      <created>1513764159159</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1513764159159</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -535,7 +542,8 @@
     <MESSAGE value="Add Genetic Algorithm.&#10;Edited on Dec.19 20:43." />
     <MESSAGE value="Edited on Dec.20 15:25." />
     <MESSAGE value="Improved Genetic Algorithm, but do not work well.&#10;Edited on Dec.20 15:25." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved Genetic Algorithm, but do not work well.&#10;Edited on Dec.20 15:25." />
+    <MESSAGE value="Edited on Dec.20 18:02" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited on Dec.20 18:02" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -941,14 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WaterMolecule_simulation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="29" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-792856579/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -963,9 +963,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WaterMolecule_simulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="29" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
+        <state relative-caret-position="-512">
           <caret line="127" column="26" lean-forward="false" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
           <folding>
             <element signature="e#17#35#0" expanded="true" />
@@ -975,8 +983,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4411">
-          <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+        <state relative-caret-position="235">
+          <caret line="232" column="19" lean-forward="true" selection-start-line="232" selection-start-column="19" selection-end-line="232" selection-end-column="19" />
           <folding>
             <element signature="e#72#90#0" expanded="true" />
           </folding>
@@ -985,9 +993,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="139">
-            <caret line="94" column="67" lean-forward="false" selection-start-line="94" selection-start-column="67" selection-end-line="94" selection-end-column="67" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="83">
+            <caret line="99" column="75" lean-forward="false" selection-start-line="99" selection-start-column="75" selection-end-line="99" selection-end-column="75" />
             <folding />
           </first_editor>
           <second_editor />

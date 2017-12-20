@@ -85,6 +85,29 @@ keep away the local minimum.
 However, for this problem, the GA may not be effective. The reason is in this question, while we search the possible solution of 
 circuits, it is not discontinuous. Changing the gate or the target and controlled qubut can make a big disturbance to the whole system.
 
+Gary Code:
+```angular2html
+For gate:
+    There are Four Gates, so using 2bit binary code is enough. 
+    00 ———— V
+    01 ———— Z
+    10 ———— S
+    11 ———— V+
+
+For Control and Target index:
+    There are six possible combinations, 1-2, 3-2, 3-1, 2-1, 2-3, 1-3, use 3bit binary code. 
+    To make least variation, above code minimize changes between adjacent ones.
+    (The former is target qubit index, the letter is controlled qubit index)
+    000 ———— 1-2 
+    010 ———— 3-2
+    011 ———— 3-1
+    111 ———— 2-1
+    101 ———— 2-3
+    100 ———— 1-3
+    
+```
+
+
 ### 3.2 Group Leader Optimization Algorithm
 This is was inspired by the importance of the leader in a group. 
 Members in the group would like to learn from the leader and therefore, become more and more like the leader.

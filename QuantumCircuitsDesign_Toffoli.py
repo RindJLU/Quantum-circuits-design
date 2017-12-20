@@ -229,7 +229,7 @@ def bin2code(group):
     # In genetic algorithm, it is important to use Gary code to reduce the variance of every change made.
     # The relationship is as follows.
     # use five
-    ctrl_dict = {'000': [1, 2], '010': [2, 1], '011': [2, 3], '111': [3, 2], '101': [3, 1], '100': [1, 3]}
+    ctrl_dict = {'000': [1, 2], '010': [3, 2], '011': [3, 1], '111': [2, 1], '101': [2, 3], '100': [1, 3]}
     group_code = []
     for member in group:
         code = []
