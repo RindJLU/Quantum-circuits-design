@@ -163,8 +163,13 @@ def uni_matrix(tof_list):
 # Main
 # print('=====================================================================')
 # print('Please select a model: 1. Simulated Annealing(Press 1) 2. Geneatic Model()')
+
+
+
 # -------------------------------------------------------------------------------------------------------------------
-# Model one: Simulated Annealing
+# 1. Simulated Annealing
+
+
 # tof_list = [] # 用列表存储数据
 # for i in range(5):
 #     tof_list.append(rand_generator())
@@ -205,7 +210,7 @@ def uni_matrix(tof_list):
 # [[1, 3, 2], [2, 1, 3], [4, 3, 2], [2, 1, 3], [3, 2, 1]]
 # print(uni_matrix([[4, 3, 2], [4, 3, 1], [2, 3, 1], [3, 1, 3], [3, 1, 3]]))
 # ----------------------------------------------------------------------------------------------------------------------
-# Main----Genetic Algorithm---------------------------------------------------------------------------------------------
+# 2.Genetic Algorithm---------------------------------------------------------------------------------------------
 
 def create_bin():
     bin_dict = {'0': ['00', '000'], '1': ['01', 'None'],  '2': ['10', '010'],
@@ -282,7 +287,7 @@ def cross_select(member_number):
 # Initial the group
 
 group_bin = ()
-m_num = 10
+m_num = 20
 for i in range(m_num):
     tof_list = []  # 用列表存储数据,数据为2进制字符串
     new_member = create_bin()
@@ -335,7 +340,7 @@ print(FID_iter)
 print(max(FID_iter))
 
 # ======================================================================================================================
-# GLOA
+# 3.GLOA
 
 # gate_index = ['V', 'Z', 'S', 'V_dug']
 # initial the circuits: eight gates in a circuits, include 2 single qubit gate

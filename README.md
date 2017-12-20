@@ -91,7 +91,8 @@ Members in the group would like to learn from the leader and therefore, become m
 Once the a member of a group is 'better' than the leader, this member will replace the current learder and become the new one.
 To guarantee this will not trapped in a local minimum, creating many groups and crossing the members of these group.
 
-For more information, please view the paper 'Group Leader Optimization Algorithm.'http://www.tandfonline.com/doi/abs/10.1080/00268976.2011.552444
+For more information, please view the paper 'Group Leader Optimization Algorithm.'http://www.tandfonline.com/doi/abs/10.1080/00268976.2011.552444\
+For code, please see QuantumCircuitsDesign_Toffoli.py (line 343-460)
 
 #### IMPLEMENTATION
 Here I apply the GLOA algrithm to a simple problem-designing Toffoli gate:
