@@ -298,8 +298,6 @@ for i in range(m_num):
 
 print(group_bin)
 
-
-
 FID_iter = []
 stop_index = 0
 iters = 0
