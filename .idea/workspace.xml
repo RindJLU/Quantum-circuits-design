@@ -16,11 +16,11 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Project$Quantumcircuits_design.coverage" NAME="Quantumcircuits_design Coverage Results" MODIFIED="1511520748587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$QuantumCircuitsDesign_QTeleportation.coverage" NAME="QuantumCircuitsDesign_QTeleportation Coverage Results" MODIFIED="1511930284657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Project$QuantumCircuitsDesign_Toffoli.coverage" NAME="QuantumCircuitsDesign_Toffoli Coverage Results" MODIFIED="1513683721354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Project$QuantumCircuitsDesign_Toffoli.coverage" NAME="QuantumCircuitsDesign_Toffoli Coverage Results" MODIFIED="1513763465426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$design_with_projectQ.coverage" NAME="design_with_projectQ Coverage Results" MODIFIED="1511691948262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$WaterMolecule_simulation.coverage" NAME="WaterMolecule_simulation Coverage Results" MODIFIED="1511933862032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$QuantumCircuitsDesign_GLOA.coverage" NAME="QuantumCircuitsDesign_GLOA Coverage Results" MODIFIED="1513502805609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Project$Object_Oriented_Programming_GA.coverage" NAME="Object-Oriented Programming_GA Coverage Results" MODIFIED="1513687360368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/papers" />
+    <SUITE FILE_PATH="coverage/Project$Object_Oriented_Programming_GA.coverage" NAME="Object-Oriented Programming_GA Coverage Results" MODIFIED="1513755387697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/papers" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -47,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuantumCircuitsDesign_Toffoli.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QuantumCircuitsDesign_Toffoli.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1213">
-              <caret line="380" column="12" lean-forward="true" selection-start-line="380" selection-start-column="12" selection-end-line="380" selection-end-column="12" />
+            <state relative-caret-position="3300">
+              <caret line="335" column="0" lean-forward="true" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
               <folding>
                 <element signature="e#72#90#0" expanded="true" />
               </folding>
@@ -59,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -106,8 +106,8 @@
         <option value="$PROJECT_DIR$/WaterMolecule_simulation.py" />
         <option value="$PROJECT_DIR$/QuantumCircuitsDesign_GLOA.py" />
         <option value="$PROJECT_DIR$/papers/Object-Oriented Programming_GA.py" />
-        <option value="$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py" />
       </list>
     </option>
   </component>
@@ -170,7 +170,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Object-Oriented Programming_GA">
+  <component name="RunManager" selected="Python.QuantumCircuitsDesign_Toffoli">
     <configuration name="Object-Oriented Programming_GA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -270,8 +270,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Object-Oriented Programming_GA" />
-        <item index="1" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_Toffoli" />
+        <item index="0" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_Toffoli" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Object-Oriented Programming_GA" />
         <item index="2" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_GLOA" />
         <item index="3" class="java.lang.String" itemvalue="Python.WaterMolecule_simulation" />
         <item index="4" class="java.lang.String" itemvalue="Python.QuantumCircuitsDesign_QTeleportation" />
@@ -430,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513687436325</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Edited on Dec.20 15:25.">
+      <created>1513754765990</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1513754765990</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -451,8 +458,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23887974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36408567" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38385502" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -518,7 +525,8 @@
     <MESSAGE value="Add GLOA in Toffoli gate design.&#10;Edited on Dec.18 15:23." />
     <MESSAGE value="Add some papers and pictures.&#10;Edited on Dec.18 15:23." />
     <MESSAGE value="Add Genetic Algorithm.&#10;Edited on Dec.19 20:43." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Genetic Algorithm.&#10;Edited on Dec.19 20:43." />
+    <MESSAGE value="Edited on Dec.20 15:25." />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited on Dec.20 15:25." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -956,16 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1213">
-          <caret line="380" column="12" lean-forward="true" selection-start-line="380" selection-start-column="12" selection-end-line="380" selection-end-column="12" />
-          <folding>
-            <element signature="e#72#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -979,6 +977,16 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_Toffoli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3300">
+          <caret line="335" column="0" lean-forward="true" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
+          <folding>
+            <element signature="e#72#90#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

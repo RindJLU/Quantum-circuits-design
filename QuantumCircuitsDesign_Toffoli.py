@@ -225,15 +225,17 @@ def bin2code(group):
     # The relationship is as follows.
     # use five
     ctrl_dict = {'000': [1, 2], '010': [2, 1], '011': [2, 3], '111': [3, 2], '101': [3, 1], '100': [1, 3]}
-    group_code =
+    group_code = []
     for member in group:
         code = []
         for bin in member:
             gate_index = int(bin[0:2], 2) + 1
             ctrl_index = ctrl_dict[bin[2:5]]
             code.append([gate_index] + ctrl_index)
+        group_code.append(code)
+    return(group_code)
 
-# print(bin2code(create_bin()))
+# print(bin2code((create_bin(),)))
 
 
 # define a function that calculate the prob of the member being selected:
@@ -252,31 +254,21 @@ def fid_prob(group):
     return i
 # print(fid_prob(member_fidelity))
 
-def var(new_group, m):
-    # create new gate
-    a = np.random.randint(1, 5)
-    b = np.random.randint(1, 4)
-    c = b
-    while c == b:
-        c = np.random.randint(1, 4)
-    # replacing gate:
-    rand_gate_index = np.random.randint(0, 5)
-    ind = len(new_group[rand_gate_index])
-    rand_index2 = np.random.randint(0, 3)  # the position of the variation in the gate
-    new_group[m][rand_gate_index][0:int(ind)-1] = [a, b, c]
-    # if rand_index2 == 0:
-    #     new_group[m][i][0] = np.random.randint(1, 5)
-    # elif rand_index2 == 1:
-    #     trg_index = new_group[m][i][2]
-    #     while trg_index == new_group[m][i][2]:
-    #         trg_index = np.random.randint(1, 3)
-    #     new_group[m][i][1] = trg_index
-    # elif rand_index2 == 2:
-    #     trg_index = new_group[m][i][1]
-    #     while trg_index == new_group[m][i][1]:
-    #         trg_index = np.random.randint(1, 3)
-    #     new_group[m][i][2] = trg_index
-    return new_group
+def var(new_group_bin, m):
+    bin_dict = {'0': ['00', '000'], '1': ['01', 'None'], '2': ['10', '010'],
+                '3': ['11', '011'], '4': ['None', '100'], '5': ['None', '101'], '7': ['None', '111']}
+    var_gate_index = np.random.randint(0, 5)
+    var_ctrl_index = np.random.randint(0, 5)
+    new_group_bin[m][var_gate_index] = \
+        bin_dict[str((int(new_group_bin[m][var_gate_index][0:2], 2) + np.random.randint(0, 4)) % 4)][0] + \
+        new_group_bin[m][var_gate_index][2:5]
+    new_ctrl = (int(new_group_bin[m][var_ctrl_index][2:5], 2) + np.random.randint(0, 8)) % 8
+    while new_ctrl in [1, 6]: # for gate index, the Gary code do not have 001 and 110
+        new_ctrl = (int(new_group_bin[m][var_gate_index][2:5], 2) + np.random.randint(0, 8)) % 8 # reset
+    new_group_bin[m][var_gate_index] = new_group_bin[m][var_gate_index][0:2] + bin_dict[str(new_ctrl)][1]
+    return new_group_bin
+
+
 
 def cross_select(member_number):
     # Assume the number of the members in a group is even.
@@ -295,38 +287,50 @@ for i in range(m_num):
     tof_list = []  # 用列表存储数据,数据为2进制字符串
     new_member = create_bin()
     group_bin = group_bin + (new_member,)
+group_code = bin2code(group_bin)
 
-print(group_bin)
 
 FID_iter = []
 stop_index = 0
 iters = 0
-while iters <= 1000 and stop_index == 0:
+while iters <= 50 and stop_index == 0:
     iters = iters + 1
-    new_group = ()
+    new_group_bin = ()
     # Select New Generation
     for m1 in range(m_num):
-        rand_index = fid_prob(group)
-        new_group = new_group + (group[rand_index],)
+        rand_index = fid_prob(group_code)
+        new_group_bin = new_group_bin + (group_bin[rand_index],)
 
     # Cross according the order that they are selected:
     pair_num = m_num/2
     for m2 in range(int(pair_num)):
-        exchange_index = np.random.randint(0, 5)
-        exchange_temp = new_group[2*m2][0:exchange_index] # Only exchange the first number of the list ----- exchange the gate
-        new_group[2*m2][0:exchange_index] = new_group[2*m2+1][0:exchange_index]
-        new_group[2*m2+1][0:exchange_index] = exchange_temp
-        # Variation:
-        new_group = var(new_group, 2*m2)
-        new_group = var(new_group, 2*m2+1)
-    group = new_group
-    del new_group
+        # exchange the gate index:
+        for i in range(int(np.random.randint(0, 4))):
+            exchange_index = int(np.random.randint(0, 5))
+            new_group_bin[2*m2][exchange_index], new_group_bin[2*m2+1][exchange_index] = \
+                new_group_bin[2 * m2 + 1][exchange_index][0:2] + new_group_bin[2*m2][exchange_index][2:5], \
+                new_group_bin[2 * m2][exchange_index][0:2] + new_group_bin[2 * m2+ 1][exchange_index][2:5]
 
+        # exchange the ctrl index:
+        for i in range(int(np.random.randint(0, 4))):
+            exchange_index = int(np.random.randint(0, 5))
+            new_group_bin[2 * m2][exchange_index], new_group_bin[2 * m2 + 1][exchange_index] = \
+                new_group_bin[2 * m2][exchange_index][0:2] + new_group_bin[2 * m2 + 1][exchange_index][2:5], \
+                new_group_bin[2 * m2 + 1][exchange_index][0:2] + new_group_bin[2 * m2][exchange_index][2:5]
+
+        # Variation:
+        for j in range(int(np.random.randint(0,5))):
+            new_group_bin = var(new_group_bin, 2*m2)
+            new_group_bin = var(new_group_bin, 2*m2+1)
+    group_bin = new_group_bin
+    del new_group_bin
+
+    group_code = bin2code(group_bin)
     m_fid = []
-    for m in group:
+    for m in group_code:
         m_fid.append(fid(uni_matrix(m), tof))
     FID_iter.append(max(m_fid))
-print(group)
+print(group_code)
 print(FID_iter)
 print(max(FID_iter))
 
