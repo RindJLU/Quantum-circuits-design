@@ -106,6 +106,8 @@ The Group Leader Optimization Algorithm, as the name implies, is a model that ma
 social groups, where the members of the group are influenced by the leader, and therefore, their behavior is increasingly similar to the leaders'.
 Hence, while optimization, the effect of a leader must be considered.
 
+![Flowchart](https://github.com/RindJLU/Quantum-circuits-design/blob/master/pictures/QW3JIZB34XD4%5B7%405IRD%5BGFM111.png)
+
 1. creating new members:\
 For every member in a group(including the leader), creating a new version of it, and replace the old member according to the __Replacement Criteria__.
 The new member follows: __New member = r1 portion of old member + r2 portion of the leader + r3 portion of random__
