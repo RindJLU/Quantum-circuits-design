@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5f38ee4-1a6a-4cec-a574-8de4d248f2a4" name="Default" comment="">
+    <list default="true" id="f5f38ee4-1a6a-4cec-a574-8de4d248f2a4" name="Default" comment="Edited on Dec.28 18:52">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/CSD.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design_with_projectQ.py" afterPath="$PROJECT_DIR$/design_with_projectQ.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,6 +35,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CSD.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pictures/CSD.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="design_with_projectQ.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/design_with_projectQ.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,7 +78,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
@@ -468,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513765053731</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Edited on Dec.28 18:52">
+      <created>1514458347882</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1514458347882</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -559,7 +572,8 @@
     <MESSAGE value="Improved Genetic Algorithm, but do not work well.&#10;Edited on Dec.20 15:25." />
     <MESSAGE value="Edited on Dec.20 18:02" />
     <MESSAGE value="Edited on Dec.20 18:17" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited on Dec.20 18:17" />
+    <MESSAGE value="Edited on Dec.28 18:52" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited on Dec.28 18:52" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -575,13 +589,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/design_with_projectQ.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/QuantumCircuitsDesign_QTeleportation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1020,6 +1027,11 @@
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pictures/CSD.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
