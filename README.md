@@ -13,7 +13,7 @@ __Example__<br>
 ![example_Toffoli](https://github.com/RindJLU/Quantum-circuits-design/blob/master/pictures/Toffoli.png)<br>
 The code here is \[1 3 2 0.0]; \[2 3 1 0.0]; \[3 2 1 0.0]; \[4 3 2 0.0]; \[2 1 3 0.0].<br>
 
-## 1.2 My code(based on simulated annealing) to generate TOFFOLI gate<br>
+## 1.2 Simulated annealing.
 See __Quantum circuits design.py__<br>
 __Problem Existed:__ Mainly use Simulated Annealing methods to generate search the new circuits, although it can generate new Toffoli gate, but it is too slow and wastes many resources.<br>
 __Some solutions of Toffoli gate:__<br>
@@ -24,7 +24,7 @@ non-rotation gates)<br>**
 \[[3, 2, 1], [2, 3, 1], [4, 3, 2], [2, 1, 3], [1, 3, 2]]<br>
 \[[1, 3, 2], [2, 1, 3], [4, 3, 2], [2, 1, 3], [3, 2, 1]]<br>
 Fidelity with step:
-![Fidelity with step](https://github.com/RindJLU/Quantum-circuits-design/blob/master/pictures/Figure_1.png)
+![Fidelity with iterations](https://github.com/RindJLU/Quantum-circuits-design/blob/master/pictures/Figure_1.png)
 
 
 
@@ -172,6 +172,11 @@ Although this is effective way, the result can easily be trapped to local minimu
 
 
 ## 5. Matrix Decomposing:
+See paper(Quantum Ciruicts for General Multiqubit Gates https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.93.130502)\
+This paper propose a way to decompose the matrix representing the quantum circuits based on CSD(cosing-sine decomposing), which
+ reduced the C-NOT gate required for a general quantum gate to 4^n - 2^(n+1), single qubit gates to 4^n.
+![CSD]()
+
 
 # Problem existed:
 ## 1. INPUT?
