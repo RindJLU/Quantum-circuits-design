@@ -198,3 +198,30 @@ coefficent * local_operator[0] x ... x local_operator[n-1]
 ```angular2html
 hamiltonian = 0.5 * QubitOperator('X0 X5') + 0.3 * QubitOperator('Z0')
 ```
+
+## 9. Excute multi-qubits operation
+```
+from projectq.ops import All
+
+All(H) | qubits
+Measure | qubits  % unecessary for Measure to use 'All'
+```
+
+## 10. Amplitude & Probability
+```
+amp = eng.backend.get_amplitude('00', qubit + qubit2)
+prob11 = eng.backend.get_probability('11', qureg)
+```
+
+## 11. Set wavefunction to a specific state
+```
+eng.backend.set_wavefunction([1/math.sqrt(2), 1/math.sqrt(2), 0, 0], qureg)  # where the list index represent the                                                                                          corresponding state.
+```
+
+## 12. Get the wavefunction
+```
+import copy
+mapping, wavefunction = copy.deepcopy(eng.backend.cheat())
+print("The full wavefunction is: {}".format(wavefunction))
+Measure | qubit1 + qubit2  # In order to not deallocate a qubit in a superposition state
+```
